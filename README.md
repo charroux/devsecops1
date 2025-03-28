@@ -47,3 +47,41 @@ git branch -D newcarservice
 ```
 git push origin --delete newcarservice
 ```
+
+### Docker
+
+Create a Dockerfile in the code folder: https://github.com/charroux/devsecops1/blob/main/Dockerfile
+
+Take care at Java version and also the name of the jar file (obtained with gradlew build).
+
+Build a Docker image:
+```
+docker build -t devsecops .      
+```
+Run the container:
+```
+docker run -p 4000:8080 devsecops    
+```
+Then check in your browser:
+```
+http://localhost:4000/cars/AA11BB
+```
+
+### Publish the Docker image to the Docker Hub
+
+Tager l'image :
+```
+docker tag 4da2332370c7 votreIdDocherHub/devsecops:1
+```
+où le numéro est l'identifiant de l'image donné par docker images, et 1 est un numéro de version
+
+Se connecter au Docker Hub :
+```
+docker login
+```
+
+Publier l'image :
+```
+docker push votreIdDocherHub/devsecops:1      
+```
+
