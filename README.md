@@ -64,7 +64,7 @@ docker run -p 4000:8080 devsecops
 ```
 Then check in your browser:
 ```
-http://localhost:4000/cars/AA11BB
+http://localhost:4000/car
 ```
 
 ### Publish the Docker image to the Docker Hub
