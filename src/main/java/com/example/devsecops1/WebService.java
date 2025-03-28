@@ -13,7 +13,7 @@ public class WebService {
 
     @GetMapping("/car")
     public Car getCar(){
-        return new Car("Ferrari", 2000);
+        return new Car("Porsche", 2000);
     }
 
 }
