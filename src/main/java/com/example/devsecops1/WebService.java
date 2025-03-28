@@ -11,4 +11,9 @@ public class WebService {
         return "Bonjour !";
     }
 
+    @GetMapping("/car")
+    public Car getCar(){
+        return new Car("Ferrari", 2000);
+    }
+
 }
